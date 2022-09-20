@@ -45,8 +45,6 @@ struct ContentView: View {
                     
                     Section {
                         
-                        //TextField("Amount: ", value: $amount, format: .currency(code: "EUR"))
-                        
                         // MARK: Amount Text Field
                         
                         TextField("Amount: ", value: $amount, format: .currency(code: Locale.current.currencyCode ?? "EUR"))
@@ -57,12 +55,11 @@ struct ContentView: View {
                         
                         Picker("Number of People:", selection: $numberOfPeople) {
                             
-                            ForEach(2..<99, id: \.self) {
+                            ForEach(1..<101, id: \.self) {
                                 
                                 Text("\($0) people")
                             }
                         }
-                        
                     }
                     
                     Section {
