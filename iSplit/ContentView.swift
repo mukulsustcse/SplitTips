@@ -87,9 +87,10 @@ struct ContentView: View {
                     ToolbarItemGroup(placement: .keyboard) {
                         Spacer()
                         
-                        Button("Done") {
+                        Button("Hide Keyboard") {
                             isFocused = false
                         }
+                        .buttonStyle(.bordered)
                     }
                 }
             }
